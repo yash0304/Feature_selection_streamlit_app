@@ -86,7 +86,6 @@ if uploaded_file:
     #Encoding of categorical columns
     if cat_cols:
          X_encoded = pd.get_dummies(X[cat_cols],drop_first=True)
-         st.write("Encoding of categorical column has been done")
          if num_cols:
               X_num = X[num_cols]
          X = pd.concat([X_encoded,X_num],axis=1)
